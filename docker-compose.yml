@@ -1,0 +1,11 @@
+version: '3.7'
+services: 
+  app:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: 'backend-mp'
+    restart: unless-stopped
+    #env_file: .env
+    ports:
+      - 4000:4000
